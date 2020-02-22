@@ -10,7 +10,7 @@
 CREATE DATABASE scraper_usd_rate;
 
 CREATE USER scraperusdrateuser WITH password 'scraperusdratepassword';
-GRANT ALL PRIVILEGES ON database scraper-usd-rate to scraperusdrateuser;
+GRANT ALL PRIVILEGES ON database scraper_usd_rate to scraperusdrateuser;
 ALTER USER scraperusdrateuser SUPERUSER;
 ```
 

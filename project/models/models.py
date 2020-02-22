@@ -10,11 +10,14 @@ class Records(db.Model):
     date = db.Column(db.String())
     rate = db.Column(db.String())
 
-    def __init__(self, records):
-        self.records = records
+    def __init__(self, code, name, date, rate):
+        self.code = code
+        self.name = name
+        self.date = date
+        self.rate = rate
 
     def __repr__(self):
-        return self.records
+        return 'Record code = '.format(self.code)
 
     def to_json(self):
         return json.loads(self.records)

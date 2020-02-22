@@ -14,10 +14,10 @@
     <tbody>
     {% for data in datas %}
       <tr>
-          <td>{{ data['code'] }}</td>
-          <td>{{ data['name'] }}</td>
-          <td>{{ data['date'] }}</td>
-          <td>$ {{ data['inverseRate'] }}</td>
+          <td>{{ data.code }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.date }}</td>
+          <td>$ {{ data.rate }}</td>
       </tr>
     {% endfor %}
     </tbody>
