@@ -36,7 +36,7 @@ def fetch():
             'TRUNCATE TABLE timefetched RESTART IDENTITY;'
         ))
 
-        now = datetime.now()
+        now = datetime.utcnow()
         new_fetched = TimeFetched(str(now))
         db.session.add(new_fetched)
 
