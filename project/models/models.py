@@ -19,6 +19,17 @@ class Records(db.Model):
     def __repr__(self):
         return 'Record code = '.format(self.code)
 
-    def to_json(self):
-        return json.loads(self.records)
+
+class TimeFetched(db.Model):
+    __tablename__ = 'timefetched'
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    date = db.Column(db.String())
+
+    def __init__(self, date):
+        self.date = date
+
+    def __repr__(self):
+        return 'Last fetched = '.format(self.date)
+
 
