@@ -63,7 +63,7 @@ Then Paste database URL to scripts/heroku_config.sh. Next commit your code chang
 
 ```shell script
 $ git push heroku master
-$ ./scripts heroku_config.sh
+$ source ./scripts/heroku_config.sh
 $ heroku run python manage.py db upgrade
 ```
 **Open app_name.herokuapp.com on your browser*
@@ -71,6 +71,11 @@ $ heroku run python manage.py db upgrade
 <hr><hr>
 
 ## NOTES
+**Init report**
+
+**Open "app_name.herokuapp.com/fetch" on your browser*
+
+
 **Drop database**
 ```shell script
 DROP DATABASE scraper_usd_rate;
@@ -80,5 +85,10 @@ DROP DATABASE scraper_usd_rate;
 ```
 $ python manage.py db migrate
 $ python manage.py db upgrade
+```
+
+**Heroku logs**:
+```
+$ heroku logs --tail
 ```
 
