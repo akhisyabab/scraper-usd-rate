@@ -24,9 +24,11 @@
 
 <div class="container" style="margin-top:80px; margin-bottom: 50px;">
  <div class="jumbotron" style="padding: 1em;">
-    <h1>Scraper USD Rate</h1>
-    <p>The report came from www.floatrates.com json source</p>
-    <p>Last fetched on : {{ last_fetched }}</p>
+     <ul>
+         <li>The report came from www.floatrates.com json source</li>
+         <li>The report saved to database postgresql and google spreadsheet. Can export to csv file</li>
+         <li>Last fetched on : {{ last_fetched }}</li>
+     </ul>
     <form action="{{ url_for('scraper.fetch') }}" method="get" class="text-center" style="margin-top: 20px;">
         <div class="form-example-int mg-t-15">
             <button class="btn btn-success notika-btn-success">Get the latest data</button>
